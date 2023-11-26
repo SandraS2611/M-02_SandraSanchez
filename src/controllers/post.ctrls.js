@@ -1,12 +1,6 @@
-const posts = [
-  {
-    place: "Argentina",
-    comments: "Mendoza",
-    image: "jhdfhjjdfg.com",
-  },
-];
+import { posts } from "../models/post.model.js"
 
-//!CONTROLADORES DE POSTS
+//!CONTROLADORES DE POST
 
 export const ctrlGetAllPosts = (req, res, next) => {
   try {
