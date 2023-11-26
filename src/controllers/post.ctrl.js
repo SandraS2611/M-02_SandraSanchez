@@ -20,10 +20,14 @@ export const ctrlGetAllPosts = (req, res, next) => {
 };
 
 export const ctrlCreatePost = (req, res, next) => {
-  const { place, comments, image } =req.body
- 
-  posts.push({ place, comments, image })
-  res.sendStatus(201)
+  try {
+    const { place, comments, image } = req.body;
+    const newPost = { place, comments, image };
+    posts.push(newPost);
+    res.sendStatus(201);
+  } catch (error) {
+    next("No hay post"); 
+  }
 };
 
 // app.patch('/posts', (req, res) => {
