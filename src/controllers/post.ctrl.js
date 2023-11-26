@@ -8,29 +8,29 @@ const posts = [
     
 //!CONTROLADORES DE POSTS
 
-export const ctrlGetAllPosts = (req, res) => {
+export const ctrlGetAllPosts = (req, res, next) => {
 try {
     if (posts.length < 1) {
         return res.sendStatus(204)
     }
     res.status(200).json(posts)
 } catch (error) {
-    res.sendStatus(500)
+ next("No hay post") //todo para que vaya al manejador de errores antes
 }
 }
 
 
-export const ctrlCreatePost = (req, res) => {
-    try {      
-posts.push({
-    posts: "Argentina",
-    comments: "Mendoza",
-    image: "jhdfhjjdfg.com"
-})     
-res.sendStatus(201)
-    } catch (error) {
-        res.sendStatus(500)
-    }
+export const ctrlCreatePost = (req, res, next) => {
+//     try {      
+// posts.push({
+//     posts: "Argentina",
+//     comments: "Mendoza",
+//     image: "jhdfhjjdfg.com"
+// })     
+// res.sendStatus(201)
+//     } catch (error) {
+//         next()
+//     }
     }
 
 
@@ -41,9 +41,10 @@ res.sendStatus(201)
 //     }
 //     res.status(200).json(posts)
 // } catch (error) {
-//     res.sendStatus(500)
+//     next()
 // }
 // })
+
 
 // app.put('/posts', (req, res) => {
 //     try {
@@ -52,9 +53,10 @@ res.sendStatus(201)
 //         }
 //         res.status(200).json(posts)
 //     } catch (error) {
-//         res.sendStatus(500)
+//        next()
 //     }
 // })
+
 
 // app.delete('/posts', (req, res) => {
 //     try {
@@ -63,6 +65,6 @@ res.sendStatus(201)
 //            }
 //         res.status(200).json(posts)
 //     } catch (error) {
-//         res.sendStatus(500)
+//        next()
 //     }
 // })

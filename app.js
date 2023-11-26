@@ -1,6 +1,6 @@
 import express from "express"
-import { ctrlGetAllPosts, ctrlCreatePost } from "./mis-funciones.js"
-
+import { ctrlGetAllPosts, ctrlCreatePost } from "./src/controllers/post.ctrl.js"
+import { errorHandler } from "./src/validations/error.handler.js"
 
 
 
@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false}))
 
 // todo CREACIÓN DE RUTAS DE CONTROLADORES
 
-app.get('/posts', ctrlGetAllPosts)
+app.get('/posts', ctrlGetAllPosts, errorHandler)
 app.post('/posts', ctrlCreatePost)
 
 
