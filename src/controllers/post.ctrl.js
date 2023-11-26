@@ -1,6 +1,6 @@
 const posts = [
   {
-    posts: "Argentina",
+    place: "Argentina",
     comments: "Mendoza",
     image: "jhdfhjjdfg.com",
   },
@@ -20,14 +20,10 @@ export const ctrlGetAllPosts = (req, res, next) => {
 };
 
 export const ctrlCreatePost = (req, res, next) => {
-  try {
-  const { posts, comments, image } = req.body;
-  const newPost = { posts, comments, image } 
-  posts.push(newPost);
+  const { place, comments, image } =req.body
+ 
+  posts.push({ place, comments, image })
   res.sendStatus(201)
-} catch (error) {
-      next()
- }
 };
 
 // app.patch('/posts', (req, res) => {

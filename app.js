@@ -16,7 +16,7 @@ app.use(express.static("public"))
 //todo PERSONALIZADO
 app.use((req, res, next) => {
 if (req.url === '/posts' && req.method === "POST") {
-if (!req.body.posts) return res.status(400).send("Failed because posts is required")
+if (!req.body.place) return res.status(400).send("Failed because place is required")
 if (!req.body.comments) return res.status(400).send("Failed because are not comments ")
 if (!req.body.image) return res.status(400).send("Failed because the iamge is required")
 }
@@ -36,9 +36,9 @@ app.get('/', (req, res) => {
 // todo CREACIÓN DE RUTAS DE CONTROLADORES
 
 app.get('/posts', ctrlGetAllPosts, errorHandler)
-app.post('/posts', ctrlCreatePost)
+app.post('/posts', ctrlCreatePost, errorHandler)
 
 
 // !para que arranque el server
-app.listen(3000)
+app.listen(4000)
 console.log("Server on port 3000");
