@@ -1,7 +1,3 @@
-import Swal from 'sweetalert2'
-
-const Swal = require('sweetalert2')
-
 function login() {
     var username, password
 
@@ -33,6 +29,3 @@ function enviar() {
       
 }
 
-$('.carousel').carousel({
-    interval:1000
-})

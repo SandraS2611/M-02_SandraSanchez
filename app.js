@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 
+
 const app = express();
 
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
     res.sendFlie("index.html");
   });
+
 
   app.listen(3000)
 console.log("Server on port 3000");
