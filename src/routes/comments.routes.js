@@ -3,10 +3,10 @@ import { errorHandler } from "../validations/error.handler.js";
 
 const commentsRouter = Router()
 
-commentsRouter.get("/comments", errorHandler);
-commentsRouter.post("/comments", errorHandler);
-commentsRouter.patch("/comments", errorHandler);
-commentsRouter.delete("/comments", errorHandler);
+commentsRouter.get("/", errorHandler);
+commentsRouter.post("/", errorHandler);
+commentsRouter.patch("/", errorHandler);
+commentsRouter.delete("/", errorHandler);
 
 
 export { commentsRouter }

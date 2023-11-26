@@ -4,9 +4,9 @@ import { errorHandler } from "../validations/error.handler.js";
 
 const postRouter = Router()
 
-postRouter.get("/posts", ctrlCreatePost, errorHandler);
-postRouter.post("/posts", errorHandler);
-postRouter.patch("/posts", errorHandler);
-postRouter.delete("/posts", ctrlGetAllPosts, errorHandler);
+postRouter.get("/", ctrlGetAllPosts, errorHandler);
+postRouter.post("/", ctrlCreatePost, errorHandler);
+postRouter.patch("/", errorHandler);
+postRouter.delete("/", errorHandler);
 
 export { postRouter }

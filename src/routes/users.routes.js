@@ -3,9 +3,9 @@ import { errorHandler } from "../validations/error.handler.js";
 
 const usersRouter = Router()
 
-usersRouter.get("/users", errorHandler);
-usersRouter.post("/users", errorHandler);
-usersRouter.patch("/users", errorHandler);
-usersRouter.delete("/users", errorHandler);
+usersRouter.get("/", errorHandler);
+usersRouter.post("/", errorHandler);
+usersRouter.patch("/", errorHandler);
+usersRouter.delete("/", errorHandler);
 
 export { usersRouter }
