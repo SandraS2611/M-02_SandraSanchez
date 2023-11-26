@@ -1,3 +1,5 @@
+alert("Holu!")
+
 function login() {
     var username, password
 

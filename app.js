@@ -11,6 +11,7 @@ const app = express()
 
 //para el body
 app.use(express.json())
+app.use(express.static("public"))
 
 //todo PERSONALIZADO
 app.use((req, res, next) => {
@@ -24,6 +25,12 @@ if (!req.body.image) return res.status(400).send("Failed because the iamge is re
 
 //para los formularios html
 app.use(express.urlencoded({ extended: false}))
+
+
+//todo ruta normal dirige a la pagina principal
+app.get('/', (req, res) => {
+    res.sendFile('index.html')
+})
 
 
 // todo CREACIÓN DE RUTAS DE CONTROLADORES
