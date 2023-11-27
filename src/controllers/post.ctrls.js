@@ -2,7 +2,7 @@ import { postModel} from "../models/post.model.js"
 
 //!CONTROLADORES DE POST
 
-export const ctrlGetAllPosts = (req, res) => {
+export const ctrlGetAllPosts = (req, res, next) => {
   try {
   const placesPosts = postModel.findAll()
   res.json(placesPosts)
@@ -11,7 +11,7 @@ export const ctrlGetAllPosts = (req, res) => {
   }
 };
 
-export const ctrlCreatePost = (req, rest) => {
+export const ctrlCreatePost = (req, res, next) => {
   try {
     const { place, comments, image } = req.body;  
     postModel.create({ place, comments, image });
@@ -27,7 +27,7 @@ const post = postModel.findOne({ id: postId })
 if (!post) {
   return res.sendStatus(404)
 }
-res.send(200).json(post)
+res.sendStatus(200).json(post)
  }
 //     try {
 //         if (posts.length < 1) {
