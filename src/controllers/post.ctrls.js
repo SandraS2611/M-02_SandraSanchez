@@ -21,23 +21,18 @@ export const ctrlCreatePost = (req, res, next) => {
   }
 };
 
- export const ctrlOnePlaceById = (req, res) => {
+ export const ctrlOnePlaceById = (req, res, next) => {
+   try {
 const { postId } = req.params 
 const post = postModel.findOne({ id: postId })
 if (!post) {
   return res.sendStatus(404)
 }
-res.sendStatus(200).json(post)
+res.json(post)
+ } catch (error) {
+       next()
  }
-//     try {
-//         if (posts.length < 1) {
-//                 res.status(200).send("PATCH")
-//     }
-//     res.status(200).json(posts)
-//  catch (error) {
-//     next()
-// }
-// })
+}
 
 // app.put('/posts', (req, res) => {
 //     try {
