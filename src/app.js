@@ -26,7 +26,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
 //todo VALIDACIÓN PERSONALIZADA
-app.use(validationPost);
+//app.use(validationPost);
 
 //? ruta normal dirige a la pagina principal
 app.get("/", (req, res) => {

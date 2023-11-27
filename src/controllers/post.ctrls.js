@@ -1,4 +1,5 @@
 import { posts } from "../models/post.model.js"
+import { validationResult } from "express-validator";
 
 //!CONTROLADORES DE POST
 
@@ -14,10 +15,16 @@ export const ctrlGetAllPosts = (req, res, next) => {
 };
 
 export const ctrlCreatePost = (req, res, next) => {
+const errors = validationResult(req) //! SE DEBE HACER EN TODAS LAS PÁGINAS (en todos los q usen validaciones)
+if (errors) {
+  return res.status(400).json(errors)
+}
+
   try {
     const { place, comments, image } = req.body;
-    const newPost = { place, comments, image };
-    posts.push(newPost);
+  
+    posts.push({ place, comments, image });
+
     res.sendStatus(201);
   } catch (error) {
     next("No hay post"); 

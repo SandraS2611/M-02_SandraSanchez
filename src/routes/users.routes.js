@@ -1,11 +1,12 @@
 import { Router } from "express"
-import { errorHandler } from "../validations/error.handler.js";
+import { usersValidations } from "../validations/users.validations.js";
+
 
 const usersRouter = Router()
 
-usersRouter.get("/", errorHandler);
-usersRouter.post("/", errorHandler);
-usersRouter.patch("/", errorHandler);
-usersRouter.delete("/", errorHandler);
+usersRouter.get("/");
+usersRouter.post("/", usersValidations);
+usersRouter.patch("/");
+usersRouter.delete("/");
 
 export { usersRouter }
