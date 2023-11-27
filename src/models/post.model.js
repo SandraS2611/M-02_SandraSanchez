@@ -14,18 +14,40 @@ const postPlace = ({ place, comments, image }) => {
   return newPostOfPlace;
 };
 
-
 const getAllPostsOfPlaces = () => {
-  return [...placesPosts]
-}
+  return [...placesPosts];
+};
 
 const getOnePlaceById = ({ id }) => {
-const post = placesPosts.find((post) => post.id === id)
-return post
-}
+  const post = placesPosts.find((post) => post.id === id);
+  return post;
+};
+
+const actualizePostOfPlace = (id, newData) => {
+  const post = getOnePlaceById({ id });
+  if (!post) return null;
+
+  //postPlace = postPlace.map((post) => { //!LO COMENTE PORQ NO ME DEJA CONTINUAR
+  if (post.id === id) {
+    return Object.assign(post, newData)
+    };
+    return post;
+  //})
+  return {
+    ...post,
+    ...newData,
+  };
+ }
+
+
+const erasePostOfPlace = ({ id }) => {
+  const postPlace = postPlace.filter((post) => post.id !== id);
+};
 
 export const postModel = {
   findAll: getAllPostsOfPlaces,
   create: postPlace,
-  findOne: getOnePlaceById
-} 
+  findOne: getOnePlaceById,
+  update: actualizePostOfPlace,
+  destry: erasePostOfPlace,
+};

@@ -34,16 +34,15 @@ res.json(post)
  }
 }
 
-// app.put('/posts', (req, res) => {
-//     try {
-//         if (posts.length < 1) {
-//             res.status(200).send("PUT")
-//         }
-//         res.status(200).json(posts)
-//     } catch (error) {
-//        next()
-//     }
-// })
+export const ctrlActualizeById = (req, res) => {
+    const { postId } = req.params
+    const { place, comments, image } = req.body
+    const post = postModel.update(postId, { place, comments, image })
+    res.sendStatus(200)
+    if (!post) {
+      res.sendStatus(404)
+ }
+  }
 
 // app.delete('/posts', (req, res) => {
 //     try {

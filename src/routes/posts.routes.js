@@ -1,5 +1,6 @@
 import { Router } from "express";
 import {
+  ctrlActualizeById,
   ctrlCreatePost,
   ctrlGetAllPosts,
   ctrlOnePlaceById,
@@ -8,6 +9,7 @@ import { newPostValidation } from "../validations/new.post.validation.js";
 import { errorHandler } from "../validations/error.handler.js";
 import { applicateValidations } from "../middlewares/applicate.validations.js";
 import { findPostValidation } from "../validations/find.posts.validations.js";
+import { actualizePostValidation } from "../validations/actualize.post.validations.js";
 
 const postRouter = Router();
 
@@ -21,7 +23,12 @@ postRouter.get(
 
 postRouter.post("/", newPostValidation, applicateValidations, ctrlCreatePost);
 
-postRouter.patch("/");
+postRouter.patch(
+  "/:postId",
+  actualizePostValidation,
+  applicateValidations,
+  ctrlActualizeById
+);
 
 postRouter.delete("/");
 
