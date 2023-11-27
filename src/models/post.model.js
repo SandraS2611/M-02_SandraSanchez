@@ -25,19 +25,22 @@ const getOnePlaceById = ({ id }) => {
 
 const actualizePostOfPlace = (id, newData) => {
   const post = getOnePlaceById({ id });
-  if (!post) return null;
-
-  //postPlace = postPlace.map((post) => { //!LO COMENTE PORQ NO ME DEJA CONTINUAR
+  if (!post) return null; { 
+ // postPlace = postPlace.map((post) => { //!LO COMENTE PORQ NO ME DEJA CONTINUAR
   if (post.id === id) {
-    return Object.assign(post, newData)
+   if (newData.place) post.place = newData.place
+   if (newData.comments) post.comments = newData.comments
+   if (newData.image) post.image = newData.image
+
+   return post
     };
     return post;
-  //})
-  return {
-    ...post,
-    ...newData,
-  };
- }
+  }   
+  // return {
+  //   ...post,
+  //   ...newData,
+  // };
+  }
 
 
 const erasePostOfPlace = ({ id }) => {
