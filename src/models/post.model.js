@@ -7,7 +7,7 @@ export const placesPosts = [
   },
 ];
 
-export const postPlace = ({ place, comments, image }) => {
+const postPlace = ({ place, comments, image }) => {
   if (!place) return null;
   const newPostOfPlace = { id: Date.now(), place, comments, image };
   placesPosts.push(newPostOfPlace);
@@ -15,6 +15,17 @@ export const postPlace = ({ place, comments, image }) => {
 };
 
 
-export const getAllPostsOfPlaces = () => {
+const getAllPostsOfPlaces = () => {
   return [...placesPosts]
 }
+
+const getOnePlaceById = ({ id }) => {
+const post = placesPosts.find((post) => post.id === id)
+return post
+}
+
+export const postModel = {
+  findAll: getAllPostsOfPlaces,
+  create: postPlace,
+  findOne: getOnePlaceById
+} 
