@@ -7,7 +7,8 @@ import helmet from "helmet";
 import { postRouter } from "./routes/posts.routes.js";
 import { commentsRouter } from "./routes/comments.routes.js";
 import { usersRouter } from "./routes/users.routes.js";
-import { validationPost } from "./middlewares/validation-posts.js";
+
+import { env } from "../settings/envs.js"; 
 
 const app = express();
 
@@ -39,5 +40,6 @@ app.use("/users", usersRouter);
 app.use("/comments", commentsRouter);
 
 //! para que arranque el server
-app.listen(4000);
-console.log("Server on port 3000");
+app.listen(env.PORT, () => {
+  console.log(`Server on port ${env.PORT}`);
+});
