@@ -26,7 +26,7 @@ const getOnePlaceById = ({ id }) => {
 const actualizePostOfPlace = (id, newData) => {
   const post = getOnePlaceById({ id });
   if (!post) return null; { 
- // postPlace = postPlace.map((post) => { //!LO COMENTE PORQ NO ME DEJA CONTINUAR
+ postPlace = postPlace.map((post) => { //!LO COMENTE PORQ NO ME DEJA CONTINUAR
   if (post.id === id) {
    if (newData.place) post.place = newData.place
    if (newData.comments) post.comments = newData.comments
@@ -34,23 +34,26 @@ const actualizePostOfPlace = (id, newData) => {
 
    return post
     };
-    return post;
-  }   
-  // return {
-  //   ...post,
-  //   ...newData,
-  // };
+  return post;
+  })  
+  return {
+    ...post,
+    ...newData,
+  };
+  }
+
   }
 
 
 const erasePostOfPlace = ({ id }) => {
-  const postPlace = postPlace.filter((post) => post.id !== id);
-};
+placesPosts = placesPosts.filter((post) => post.id !== id)
+}
+
 
 export const postModel = {
   findAll: getAllPostsOfPlaces,
   create: postPlace,
   findOne: getOnePlaceById,
   update: actualizePostOfPlace,
-  destry: erasePostOfPlace,
+  destroy: erasePostOfPlace,
 };

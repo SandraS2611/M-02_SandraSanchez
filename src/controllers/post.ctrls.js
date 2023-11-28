@@ -1,11 +1,11 @@
-import { postModel} from "../models/post.model.js"
+import { postModel } from "../models/post.model.js";
 
 //!CONTROLADORES DE POST
 
 export const ctrlGetAllPosts = (req, res, next) => {
   try {
-  const placesPosts = postModel.findAll()
-  res.json(placesPosts)
+    const placesPosts = postModel.findAll();
+    res.json(placesPosts);
   } catch (error) {
     next("No hay post"); //todo para que vaya al manejador de errores antes
   }
@@ -13,44 +13,40 @@ export const ctrlGetAllPosts = (req, res, next) => {
 
 export const ctrlCreatePost = (req, res, next) => {
   try {
-    const { place, comments, image } = req.body;  
+    const { place, comments, image } = req.body;
     postModel.create({ place, comments, image });
     res.sendStatus(201);
   } catch (error) {
-    next("No hay post"); 
+    next("No hay post");
   }
 };
 
- export const ctrlOnePlaceById = (req, res, next) => {
-   try {
-const { postId } = req.params 
-const post = postModel.findOne({ id: postId })
-if (!post) {
-  return res.sendStatus(404)
-}
-res.json(post)
- } catch (error) {
-       next()
- }
-}
+export const ctrlOnePlaceById = (req, res, next) => {
+  try {
+    const { postId } = req.params;
+    const post = postModel.findOne({ id: postId });
+    if (!post) {
+      return res.sendStatus(404);
+    }
+    res.json(post);
+  } catch (error) {
+    next();
+  }
+};
 
 export const ctrlActualizeById = (req, res) => {
-    const { postId } = req.params
-    const { place, comments, image } = req.body
-    const post = postModel.update(postId, { place, comments, image })
-    res.sendStatus(200)
-    if (!post) {
-      res.sendStatus(404)
- }
+  const { postId } = req.params;
+  const { place, comments, image } = req.body;
+  const post = postModel.update(postId, { place, comments, image });
+  res.sendStatus(200);
+  if (!post) {
+    res.sendStatus(404);
   }
+};
 
-// app.delete('/posts', (req, res) => {
-//     try {
-//         if (posts.length < 1) {
-//             res.status(200).send("DELETE")
-//            }
-//         res.status(200).json(posts)
-//     } catch (error) {
-//        next()
-//     }
-// })
+export const ctrlErasePostById = (req, res) => {
+  const { postId } = req.params;
+  postModel.destroy({ id: postId });
+  res.sendStatus(200);
+};
+//! NO FUNCIONA EL DELETE

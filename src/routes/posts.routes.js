@@ -2,6 +2,7 @@ import { Router } from "express";
 import {
   ctrlActualizeById,
   ctrlCreatePost,
+  ctrlErasePostById,
   ctrlGetAllPosts,
   ctrlOnePlaceById,
 } from "../controllers/post.ctrls.js";
@@ -30,6 +31,6 @@ postRouter.patch(
   ctrlActualizeById
 );
 
-postRouter.delete("/");
+postRouter.delete("/:postId", findPostValidation, applicateValidations, ctrlErasePostById);
 
 export { postRouter };
