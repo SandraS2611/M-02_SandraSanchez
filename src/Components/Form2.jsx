@@ -6,7 +6,7 @@ export const Form2 = () => {
       <h1>Welcome Travelers!!!</h1>
       <div class="d-grid gap-2 col-6 mx-auto">
         <a
-          href="/profile"
+          href="/perfil"
           class="btn btn-lg btn btn-success"
           role="button"
           data-bs-toggle="button"
@@ -14,6 +14,8 @@ export const Form2 = () => {
           Login
         </a>
       </div>
+
+      
 
       <br />
 

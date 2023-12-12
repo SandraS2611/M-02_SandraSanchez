@@ -3,7 +3,7 @@ import { Navbar } from "./components/Navbar";
 import { HomePage } from "./pages/HomePage";
 import { RegisterForm } from "./components/RegisterForm";
 import { NotFoundPage } from "./pages/404Page";
-import { Profile } from "./pages/Profile";
+import { Perfil } from "./Pages/Perfil";
 
 
 
@@ -15,7 +15,7 @@ export const App = () => {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/perfil" element={<Perfil />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
