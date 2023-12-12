@@ -4,7 +4,9 @@ import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
-export const LoginForm = () => {
+
+
+export const Profile = () => {
   const ref = useRef(null);
 
   const { login } = useContext(AuthContext);
