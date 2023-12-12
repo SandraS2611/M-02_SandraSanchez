@@ -2,7 +2,7 @@ export const Form2 = () => {
   return (
     <>
       <h1>Welcome Travelers!!!</h1>
-
+<br />
       <div>
         <div class="form-group">
           <div class="form-floating mb-3">
@@ -25,12 +25,12 @@ export const Form2 = () => {
             <label for="floatingPassword">Contraseña</label>
           </div>
           <a
-            href="/perfil" 
+            href="/profile" 
             class="btn btn-lg btn btn-outline-success"
             role="button"
             data-bs-toggle="button"
           >
-            Entrar
+            Login
           </a>
         </div>
       </div>

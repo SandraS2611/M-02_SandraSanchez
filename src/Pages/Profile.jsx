@@ -1,12 +1,12 @@
-export const Perfil = () => {
+export const Profile = () => {
   return ( 
     <div class="containerComents">
     <form action="/posts" method="post" />
-        <label for="place">Lugares:</label>
+        <label for="place">Place:</label>
         <input type="text" name="place" /><br />
-        <label for="comments">Comentarios:</label><br />
+        <label for="comments">Comments:</label><br />
         <textarea name="comments" cols="30" rows="10"></textarea><br />
-        <label for="">Imagen:</label>
+        <label for="">Image:</label>
         <input type="url" name="image" />
            <a
           href="/posts"
@@ -14,7 +14,7 @@ export const Perfil = () => {
           role="button"
           data-bs-toggle="button"
         >
-          Postear
+          Submit
         </a>
 </div>
   )

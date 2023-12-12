@@ -8,7 +8,7 @@ export const PrivateRoutes = () => {
 
   useEffect(() => {
     if (auth === null) {
-      navigate("/login"); //login
+      navigate("/perfil"); //login
     }
   }, [auth, navigate]);
 

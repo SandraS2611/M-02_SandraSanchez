@@ -2,6 +2,33 @@ export const Posts = () => {
   return (
     <div>
       <h1>Posts</h1>
-    </div>
+
+<a
+href="/profile"
+class="btn btn-lg btn btn-outline-success"
+role="button"
+data-bs-toggle="button"
+>
+Profile
+</a>
+
+<a
+href="/register"
+class="btn btn-lg btn btn-outline-success"
+role="button"
+data-bs-toggle="button"
+>
+Register
+</a>
+
+<a
+href="/"
+class="btn btn-lg btn btn-outline-success"
+role="button"
+data-bs-toggle="button"
+>
+Logout
+</a>
+  </div>
   )
 }
