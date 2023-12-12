@@ -8,7 +8,14 @@ export const Perfil = () => {
         <textarea name="comments" cols="30" rows="10"></textarea><br />
         <label for="">Imagen:</label>
         <input type="url" name="image" />
-        <button onclick="enviar()">Enviar</button>
+        <a
+          href="/posts"
+          class="btn btn-lg btn btn-outline-success"
+          role="button"
+          data-bs-toggle="button"
+        >
+          Postear
+        </a>
 </div>
   )
 }

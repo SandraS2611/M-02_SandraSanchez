@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import { HomePage } from "./pages/HomePage";
 import { RegisterForm } from "./components/RegisterForm";
 import { NotFoundPage } from "./pages/404Page";
 import { Perfil } from "./Pages/Perfil";
+import { HomePage } from "./Pages/HomePage";
 
 
 
