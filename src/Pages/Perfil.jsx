@@ -1,7 +1,6 @@
 export const Perfil = () => {
   return ( 
-    <div className="post">
-          <div class="containerComents">
+    <div class="containerComents">
     <form action="/posts" method="post" />
         <label for="place">Lugares:</label>
         <input type="text" name="place" /><br />
@@ -9,7 +8,7 @@ export const Perfil = () => {
         <textarea name="comments" cols="30" rows="10"></textarea><br />
         <label for="">Imagen:</label>
         <input type="url" name="image" />
-        <a
+           <a
           href="/posts"
           class="btn btn-lg btn btn-outline-success"
           role="button"
@@ -18,6 +17,5 @@ export const Perfil = () => {
           Postear
         </a>
 </div>
-    </div>
   )
 }

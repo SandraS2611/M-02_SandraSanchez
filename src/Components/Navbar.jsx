@@ -31,6 +31,12 @@ export const Navbar = () => {
                 Register
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/posts">
+                Posts
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

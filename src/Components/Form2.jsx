@@ -25,7 +25,7 @@ export const Form2 = () => {
             <label for="floatingPassword">Contraseña</label>
           </div>
           <a
-            href="/login" //perfil
+            href="/perfil" 
             class="btn btn-lg btn btn-outline-success"
             role="button"
             data-bs-toggle="button"
