@@ -1,6 +1,7 @@
 export const Perfil = () => {
   return ( 
-    <div class="containerComents">
+    <div className="post">
+          <div class="containerComents">
     <form action="/posts" method="post" />
         <label for="place">Lugares:</label>
         <input type="text" name="place" /><br />
@@ -17,5 +18,6 @@ export const Perfil = () => {
           Postear
         </a>
 </div>
+    </div>
   )
 }
