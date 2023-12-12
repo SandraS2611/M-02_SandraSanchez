@@ -1,5 +1,9 @@
+import { Form2 } from "../components/Form2"
+
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+     <Form2 /> 
+    </div>
   )
 }
