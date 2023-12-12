@@ -7,7 +7,7 @@ export const Form2 = () => {
       <div class="d-grid gap-2 col-6 mx-auto">
         <a
           href="/profile"
-          class="btn btn-lg btn-primary"
+          class="btn btn-lg btn btn-success"
           role="button"
           data-bs-toggle="button"
         >

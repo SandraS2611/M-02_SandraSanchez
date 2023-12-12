@@ -1,7 +1,11 @@
 export const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    // <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
       <div class="container-fluid">
+      <a class="marca-navbar">
+      <img src="public/SS.png" alt="Sandra Sanchez" />
+           </a>
         <a class="navbar-brand">Where we going today?</a>
         <button
           class="navbar-toggler"
