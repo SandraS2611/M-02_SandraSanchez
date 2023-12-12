@@ -18,5 +18,6 @@ module.exports = {
     ],
     "react/prop-types": "off",
     "react/no-unknown-property": "off",
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
   },
 }
