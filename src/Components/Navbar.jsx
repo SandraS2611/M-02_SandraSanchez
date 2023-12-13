@@ -1,7 +1,7 @@
 export const Navbar = () => {
   return (
     // <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
       <div class="container-fluid">
       <a class="marca-navbar">
       <img src="public/SS.png" alt="Sandra Sanchez" />
@@ -22,18 +22,18 @@ export const Navbar = () => {
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a class="nav-link active" href="/">
-                HomePage
+              <p class="text-light">HomePage</p>
                 <span class="visually-hidden">(current)</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/register">
-                Register
+              <p class="text-light">Register</p>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="/posts">
-                Posts
+              <p class="text-light">Posts</p>
                 <span class="visually-hidden">(current)</span>
               </a>
             </li>

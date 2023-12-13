@@ -1,7 +1,7 @@
 export const Posts = () => {
   return (
-    <div>
-      <h1>Posts</h1>
+    <div className="postPage">
+      <h1 className="posts">Posts</h1>
 
 <a
 href="/profile"

@@ -1,9 +1,9 @@
 export const Form2 = () => {
   return (
     <>
-      <h1>Welcome Travelers!!!</h1>
+      <h1 className="home">Welcome Travelers!!!</h1>
 <br />
-      <div>
+      <div class= "container-form"> 
         <div class="form-group">
           <div class="form-floating mb-3">
             <input

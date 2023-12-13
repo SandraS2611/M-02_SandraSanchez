@@ -1,5 +1,8 @@
 export const Profile = () => {
   return ( 
+    <div className="profilePost">
+    <h1 className="profile">Profile</h1>
+    <div class= "container-form"> 
     <div class="containerComents">
     <form action="/posts" method="post" />
         <label for="place">Place:</label>
@@ -13,9 +16,11 @@ export const Profile = () => {
           class="btn btn-lg btn btn-outline-success"
           role="button"
           data-bs-toggle="button"
-        >
+          >
           Submit
         </a>
 </div>
+</div>
+          </div>
   )
 }

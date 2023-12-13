@@ -41,9 +41,10 @@ export const RegisterForm = () => {
 
   return (
     <div>
-      <h2>New User</h2>
+      <h1 className="user">New User</h1>
       <br />
 
+      <div class= "container-form"> 
       <form onSubmit={handleSubmit} ref={ref}>
         <input
           type="email"
@@ -81,6 +82,7 @@ export const RegisterForm = () => {
           Register
         </a>
       </form>
+    </div>
     </div>
   );
 };
