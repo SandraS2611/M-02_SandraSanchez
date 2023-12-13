@@ -44,11 +44,11 @@ export const RegisterForm = () => {
       <h1 className="user">New User</h1>
       <br />
 
-      <div class= "container-form"> 
+      <div className= "container-form"> 
       <form onSubmit={handleSubmit} ref={ref}>
         <input
           type="email"
-          class="btn btn-outline-secondary"
+          className="btn btn-outline-secondary"
           placeholder="my-email@email.com"
           name="email"
           required
@@ -57,7 +57,7 @@ export const RegisterForm = () => {
 
         <input
           type="text"
-          class="btn btn-outline-secondary"
+          className="btn btn-outline-secondary"
           placeholder="User"
           name="username"
           required
@@ -66,7 +66,7 @@ export const RegisterForm = () => {
 
         <input
           type="password"
-          class="btn btn-outline-secondary"
+          className="btn btn-outline-secondary"
           placeholder="********"
           name="password"
           required
@@ -75,7 +75,7 @@ export const RegisterForm = () => {
 
         <a
           href="/profile"
-          class="btn btn-lg btn btn-secondary "
+          className="btn btn-lg btn btn-secondary "
           role="button"
           data-bs-toggle="button"
         >

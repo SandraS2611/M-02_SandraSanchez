@@ -2,8 +2,8 @@ export const Profile = () => {
   return ( 
     <div className="profilePost">
     <h1 className="profile">Profile</h1>
-    <div class= "container-form"> 
-    <div class="containerComents">
+    <div className= "container-form"> 
+    <div className="containerComents">
     <form action="/posts" method="post" />
         <label for="place">Place:</label>
         <input type="text" name="place" /><br />
@@ -13,7 +13,7 @@ export const Profile = () => {
         <input type="url" name="image" />
            <a
           href="/posts"
-          class="btn btn-lg btn btn-outline-success"
+          className="btn btn-lg btn btn-outline-success"
           role="button"
           data-bs-toggle="button"
           >

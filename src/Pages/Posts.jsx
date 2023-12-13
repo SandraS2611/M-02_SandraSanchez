@@ -5,7 +5,7 @@ export const Posts = () => {
 
 <a
 href="/profile"
-class="btn btn-lg btn btn-outline-success"
+className="btn btn-lg btn btn-outline-success"
 role="button"
 data-bs-toggle="button"
 >
@@ -14,7 +14,7 @@ Profile
 
 <a
 href="/register"
-class="btn btn-lg btn btn-outline-success"
+className="btn btn-lg btn btn-outline-success"
 role="button"
 data-bs-toggle="button"
 >
@@ -23,7 +23,7 @@ Register
 
 <a
 href="/"
-class="btn btn-lg btn btn-outline-success"
+className="btn btn-lg btn btn-outline-success"
 role="button"
 data-bs-toggle="button"
 >
