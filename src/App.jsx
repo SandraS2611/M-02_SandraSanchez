@@ -1,16 +1,11 @@
+import { HomePage } from "./Pages/HomePage";
+import { Posts } from "./Pages/Posts";
+import { NotFoundPage } from "./Pages/404Page";
+import { Navbar } from "./Components/Navbar";
 import { Route, Routes } from "react-router-dom";
-import { Navbar } from "./FrontEnd/src/components/Navbar";
-import { RegisterForm } from "./FrontEnd/src/components/RegisterForm";
-import { NotFoundPage } from "./FrontEnd/src/pages/404Page";
-import { HomePage } from "./FrontEnd/src/Pages/HomePage";
-import { Login } from "./FrontEnd/src/Pages/Login";
-import { Posts } from "./FrontEnd/src/Pages/Posts";
-import { Profile } from "./FrontEnd/src/Pages/Profile";
-
-
-
-
-
+import { Login } from "./Pages/Login";
+import { RegisterForm } from "./Components/RegisterForm";
+import { Profile } from "./Pages/Profile";
 
 export const App = () => {
   return (
