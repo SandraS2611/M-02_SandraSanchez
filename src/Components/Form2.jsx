@@ -5,8 +5,8 @@ export const Form2 = () => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-   e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -39,7 +39,7 @@ export const Form2 = () => {
             <label for="floatingPassword">********</label>
           </div>
           <br />
-          
+
           <a
             href="/profile"
             className="btn btn-lg btn btn-outline-success"
